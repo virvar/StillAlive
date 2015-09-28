@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{977403DD-AE5B-4D0C-B251-A3D53382F91F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameObjects</RootNamespace>
+    <AssemblyName>GameLibrary</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Character.cs" />
+    <Compile Include="DrawableClasses\DrawableCharacter.cs" />
+    <Compile Include="DrawableClasses\DrawableSolid.cs" />
+    <Compile Include="DrawableClasses\RealCharacter.cs" />
+    <Compile Include="DrawableClasses\Sprite.cs" />
+    <Compile Include="Grid.cs" />
+    <Compile Include="Helpers\AStar.cs" />
+    <Compile Include="Helpers\CollisionHelper.cs" />
+    <Compile Include="IMoveBehavior.cs" />
+    <Compile Include="ISolid.cs" />
+    <Compile Include="ISprite.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="MoveBehaviors\EmptyBehavior.cs" />
+    <Compile Include="MoveBehaviors\PlayerMove1.cs" />
+    <Compile Include="MoveBehaviors\MonsterMoveAStar.cs" />
+    <Compile Include="MoveBehaviors\StupidMonsterMove.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoClasses\ProtoLevel.cs" />
+    <Compile Include="ProtoClasses\ProtoPoint.cs" />
+    <Compile Include="ProtoClasses\ProtoSolid.cs" />
+    <Compile Include="ProtoClasses\ProtoVector2.cs" />
+    <Compile Include="Score.cs" />
+    <Compile Include="Solid.cs" />
+    <Compile Include="Values\Commands.cs" />
+    <Compile Include="Values\Dimensions.cs" />
+    <Compile Include="Values\Styles.cs" />
+    <Compile Include="Values\Textures.cs" />
+    <Compile Include="Weapon.cs" />
+    <Compile Include="Weapons\Pistol.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.4.0.459, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsGL.3.4.0.459\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsGL.3.4.0.459\lib\net40\OpenTK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Diagrams\MainDiagram.cd" />
+    <None Include="Diagrams\WeaponsDiagram.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
