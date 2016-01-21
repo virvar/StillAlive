@@ -15,7 +15,7 @@ Settings are stored in 'settings.txt' file.
 
 ## Note
 
-If you get DllNotFoundException (openal32.dll) when running client app, install it by running 'GenNBs/_install/oalinst.exe'.
+If you get DllNotFoundException (openal32.dll) when running client app, then you need to install OpengAL.
 
 ## License
 
