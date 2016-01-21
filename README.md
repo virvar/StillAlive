@@ -15,7 +15,7 @@ Settings are stored in 'settings.txt' file.
 
 ## Note
 
-If you get DllNotFoundException (openal32.dll) when running client app, then you need to install OpengAL.
+If you get DllNotFoundException (openal32.dll) when running client app, then you need to install OpenAL.
 
 ## License
 
